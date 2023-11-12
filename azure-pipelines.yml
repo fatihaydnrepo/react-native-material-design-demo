@@ -3,7 +3,7 @@ trigger:
     include:
       - master
 variables:
-  - group: Mobiledeneme
+  - group: Mobile # change it to the name you have set
 pool:
   vmImage: 'ubuntu-latest'
 steps:
@@ -13,7 +13,7 @@ steps:
   - task: NodeTool@0
     displayName: 'Install Node'
     inputs:
-      versionSpec: '13.11.23' 
+      versionSpec: '16.10.0' # you can use your desired version here
   - script: yarn install
     displayName: Install Dependencies
   - script: |
